@@ -1,0 +1,48 @@
+// HAMBURGER
+
+.hamburger {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 1;
+  transition: all 0.25s;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--ms-open {
+    transform: rotate(90deg);
+  }
+
+  @include mq(m) {
+    &--open {
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// SIDEBAR
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0;
+  height: 100%;
+  background-color: slategrey;
+  overflow: hidden;
+  transition: width 0.25s;
+
+  &--ms-open {
+    width: 150px;
+  }
+
+  @include mq(m) {
+    width: 150px;
+    &--hide {
+      width: 0;
+    }
+  }
+}

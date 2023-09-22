@@ -1,0 +1,27 @@
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Flexbox extends
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// flex-column
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-row-space-between {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// Index page extends
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+// // set padding, margin and width for content wrapper
+
+// %in-wr-pad-wid-mar {
+//   padding: 15px;
+//   width: 95%;
+//   margin: 1rem auto 0;
+// }

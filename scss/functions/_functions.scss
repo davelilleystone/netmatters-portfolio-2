@@ -1,0 +1,5 @@
+// convert pixels to rem
+
+@function px-to-rem($px) {
+  @return calc($px / $font-size-normal) * 1rem;
+}

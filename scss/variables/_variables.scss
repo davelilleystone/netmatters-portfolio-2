@@ -1,0 +1,36 @@
+/////////////////
+// Typography //
+///////////////
+
+// font sizes
+
+$font-size-normal: 1rem;
+$font-size-small: px-to-rem(12px);
+$font-size-medium: px-to-rem(14px);
+$font-size-large: px-to-rem(18px);
+$font-size-xlarge: 1.5rem;
+
+// font weight
+
+$font-weight-normal: 400;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+//////////////////
+// Screen Size //
+////////////////
+
+$s: 576px;
+$m: 768px;
+$l: 992px;
+$xl: 1200px;
+
+/////////////
+// Layout //
+///////////
+
+// max inner wrapper width
+
+$content-wrapper-max: 1200px;
+
+$base-line-height: 1.5;

@@ -1,0 +1,43 @@
+// media query mixin
+
+@mixin mq($bp) {
+  @if ($bp == s) {
+    @media screen and (min-width: $s) {
+      @content;
+    }
+  } @else if($bp == m) {
+    @media screen and (min-width: $m) {
+      @content;
+    }
+  } @else if($bp == l) {
+    @media screen and (min-width: $l) {
+      @content;
+    }
+  } @else if($bp == xl) {
+    @media screen and (min-width: $xl) {
+      @content;
+    }
+  } @else {
+    @error ('Unknown breakpoint supplied');
+  }
+}
+
+// @mixin std-btn($col, $font-size) {
+//   display: inline-block;
+//   font-size: $font-size;
+//   margin: $std-btn-top-bottom-margin 0;
+//   padding: $std-btn-vert-padding calc($std-btn-vert-padding * 1.33);
+//   background-color: $col;
+//   color: $std-btn-font-color;
+//   border: 1px solid transparent;
+//   border-radius: 3px;
+//   text-transform: uppercase;
+//   text-decoration: none;
+// }
+
+// reset ul
+@mixin reset-ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
