@@ -2,15 +2,16 @@
 // Typography //
 ///////////////
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@400;700&display=swap");
 
 $font-open-sans: "open sans", sans-serif;
 $font-roboto: roboto, sans-serif;
 $font-montserrat: montserrat, sans-serif;
+$font-exo: exo, sans-serif;
 
 $font-body: $font-roboto;
 $font-heading: $font-montserrat;
-$font-menu: $font-open-sans;
+$font-menu: $font-exo;
 
 // font sizes
 

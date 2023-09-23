@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo&family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@400;700&display=swap");
 .content-container {
   display: flex;
   flex-direction: column;
@@ -93,7 +93,7 @@ a {
   align-items: center;
   padding: 0.5rem 0;
   width: 80%;
-  font-family: "open sans", sans-serif;
+  font-family: exo, sans-serif;
 }
 .nav-links__icon {
   margin-right: 0.5rem;
