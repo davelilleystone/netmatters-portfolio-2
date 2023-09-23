@@ -1,6 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@400;700&display=swap");
 .content-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin-left: 0;
   transition: all 0.25s;
 }
@@ -15,12 +16,13 @@
 
 .content-wrapper {
   max-width: 1200px;
-  margin: 0 25px;
+  margin: 0 1rem;
 }
 
 :root {
   line-height: 1.5;
   font-size: 1rem;
+  font-family: roboto, sans-serif;
 }
 
 * {
@@ -29,13 +31,16 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: initial;
+}
+
 .hamburger {
   position: fixed;
   left: 20px;
   top: 10px;
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
-  border: 2px solid black;
+  font-size: 2rem;
   border-radius: 3px;
   z-index: 1;
   transition: all 0.25s;
@@ -47,20 +52,20 @@
   transform: rotate(90deg);
 }
 @media screen and (min-width: 768px) {
-  .hamburger--open {
-    transform: rotate(90deg);
+  .hamburger {
+    visibility: hidden;
   }
 }
 
 .sidebar {
   position: fixed;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 0;
   height: 100%;
-  background-color: slategrey;
-  border-top-right-radius: 25px;
+  background-color: #e0e0e0;
+  border-radius: 0 10px 10px 0;
   overflow: hidden;
   transition: width 0.25s;
 }
@@ -71,15 +76,58 @@
   .sidebar {
     width: 150px;
   }
-  .sidebar--hide {
-    width: 0;
-  }
 }
 .sidebar__content {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-left: 20px;
+  margin: 0 15px;
+}
+
+.logo {
+  margin: 4rem 0 3rem;
+}
+
+.nav-links__link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  width: 80%;
+  font-family: "open sans", sans-serif;
+}
+.nav-links__icon {
+  margin-right: 0.5rem;
+  flex: 0 0 25%;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+.socials__icon {
+  font-size: 2rem;
+}
+.socials__icon--github {
+  color: #171515;
+}
+.socials__icon--github:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.socials__icon--linkedin {
+  color: #0077b5;
+}
+.socials__icon--linkedin:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
+}
+.socials__icon--twitter {
+  color: #000;
+}
+.socials__icon--twitter:hover {
+  transform: scale(1.2);
+  transition: all 0.5s;
 }
 
 /*# sourceMappingURL=style.css.map */

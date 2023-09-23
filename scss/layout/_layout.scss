@@ -2,7 +2,7 @@
 
 .content-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin-left: 0;
   transition: all 0.25s;
 
@@ -16,5 +16,5 @@
 
 .content-wrapper {
   max-width: $content-wrapper-max;
-  margin: 0 25px;
+  margin: 0 1rem;
 }

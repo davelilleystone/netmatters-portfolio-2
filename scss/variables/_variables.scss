@@ -2,6 +2,16 @@
 // Typography //
 ///////////////
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&family=Roboto:wght@400;700&display=swap");
+
+$font-open-sans: "open sans", sans-serif;
+$font-roboto: roboto, sans-serif;
+$font-montserrat: montserrat, sans-serif;
+
+$font-body: $font-roboto;
+$font-heading: $font-montserrat;
+$font-menu: $font-open-sans;
+
 // font sizes
 
 $font-size-normal: 1rem;
@@ -15,6 +25,14 @@ $font-size-xlarge: 1.5rem;
 $font-weight-normal: 400;
 $font-weight-semi-bold: 600;
 $font-weight-bold: 700;
+
+//////////////
+// Colours //
+/////////////
+
+$linkedin-blue: #0077b5;
+$github-red: #171515;
+$twitter-black: #000;
 
 //////////////////
 // Screen Size //

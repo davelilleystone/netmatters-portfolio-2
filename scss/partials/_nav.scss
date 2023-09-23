@@ -4,9 +4,7 @@
   position: fixed;
   left: 20px;
   top: 10px;
-  font-size: 1.5rem;
-  padding: 0 0.5rem;
-  border: 2px solid black;
+  font-size: 2rem;
   border-radius: 3px;
   z-index: 1;
   transition: all 0.25s;
@@ -20,24 +18,21 @@
   }
 
   @include mq(m) {
-    &--open {
-      transform: rotate(90deg);
-    }
+    visibility: hidden;
   }
 }
 
-// SIDEBAR
+// SIDEBAR MAIN CONTAINER
 
 .sidebar {
   position: fixed;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   width: 0;
   height: 100%;
-  background-color: slategrey;
-  border-top-right-radius: 25px;
-
+  background-color: #e0e0e0;
+  border-radius: 0 10px 10px 0;
   overflow: hidden;
   transition: width 0.25s;
 
@@ -47,15 +42,65 @@
 
   @include mq(m) {
     width: 150px;
-    &--hide {
-      width: 0;
-    }
   }
+
+  // SIDEBAR CONTENT CONTAINER
 
   &__content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    margin-left: 20px;
+    margin: 0 15px;
+  }
+}
+
+// SIDEBAR LOGO CONTAINER
+
+.logo {
+  margin: 4rem 0 3rem;
+}
+
+// SIDEBAR LINKS CONTAINER
+
+.nav-links {
+  &__link {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 0;
+    width: 80%;
+    font-family: $font-menu;
+  }
+  &__icon {
+    margin-right: 0.5rem;
+    flex: 0 0 25%;
+  }
+}
+
+// SIDEBAR SOCIALS CONTAINER
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  &__icon {
+    font-size: 2rem;
+    &--github {
+      color: $github-red;
+      &:hover {
+        @include icon-hover-scale;
+      }
+    }
+    &--linkedin {
+      color: $linkedin-blue;
+      &:hover {
+        @include icon-hover-scale;
+      }
+    }
+    &--twitter {
+      color: $twitter-black;
+      &:hover {
+        @include icon-hover-scale;
+      }
+    }
   }
 }
