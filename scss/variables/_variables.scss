@@ -6,11 +6,11 @@
 
 $font-open-sans: "open sans", sans-serif;
 $font-roboto: roboto, sans-serif;
-$font-montserrat: montserrat, sans-serif;
+// $font-montserrat: montserrat, sans-serif;
 $font-exo: exo, sans-serif;
 
 $font-body: $font-roboto;
-$font-heading: $font-montserrat;
+$font-heading: $font-open-sans;
 $font-menu: $font-exo;
 
 // font sizes
@@ -20,6 +20,9 @@ $font-size-small: px-to-rem(12px);
 $font-size-medium: px-to-rem(14px);
 $font-size-large: px-to-rem(18px);
 $font-size-xlarge: 1.5rem;
+
+$font-size-section-heading: 3rem;
+$font-size-card-heading: 1.5rem;
 
 // font weight
 
@@ -34,6 +37,10 @@ $font-weight-bold: 700;
 $linkedin-blue: #0077b5;
 $github-red: #171515;
 $twitter-black: #000;
+$html-orange: #e34c26;
+$css-blue: #264de4;
+$js-yellow: #f0db4f;
+$sass-pink: #c69;
 
 //////////////////
 // Screen Size //

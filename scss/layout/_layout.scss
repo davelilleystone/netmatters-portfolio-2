@@ -4,17 +4,17 @@
   display: flex;
   flex-direction: column;
   margin-left: 0;
-  transition: all 0.25s;
 
   @include mq(m) {
-    margin-left: 150px;
-    &--hide-margin {
-      margin-left: 0;
-    }
+    margin-left: 250px;
   }
 }
 
 .content-wrapper {
+  margin: 0 auto;
   max-width: $content-wrapper-max;
-  margin: 0 1rem;
+  padding: 0 1rem;
+  @include mq(m) {
+    padding: 0;
+  }
 }
