@@ -3,18 +3,24 @@
 .content-container {
   display: flex;
   flex-direction: column;
-  margin-left: 0;
+  margin: 0 0 1.5rem 0;
 
   @include mq(m) {
-    margin-left: 250px;
+    margin: 0 0 3rem 250px;
   }
 }
 
+// add temp bottom margin
 .content-wrapper {
   margin: 0 auto;
+  width: 100%;
   max-width: $content-wrapper-max;
   padding: 0 1rem;
   @include mq(m) {
-    padding: 0;
+    padding: 0 1.5rem;
+  }
+
+  @include mq(l) {
+    padding: 0 2rem;
   }
 }

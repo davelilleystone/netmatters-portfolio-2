@@ -1,1 +1,119 @@
+// CONTACT CONTAINER
 
+.contact {
+  display: flex;
+  flex-direction: column;
+
+  @include mq(xl) {
+    flex-direction: row;
+  }
+}
+
+// CONTACT TEXT CONTAINER
+
+.contact-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  &__image {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  @include mq(xl) {
+    flex: 0 1 30%;
+    margin-right: 5rem;
+    margin-bottom: 0;
+  }
+
+  &__paragraph {
+    @include mq(l) {
+      font-size: $font-size-large;
+    }
+  }
+
+  &__text-wrapper {
+    flex: 1;
+    padding: 1rem;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+  }
+}
+
+// FORM CONTAINER
+
+.form-wrapper {
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  @include mq(l) {
+    flex: 1;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  align-content: start;
+  border-radius: 5px;
+
+  @include mq(l) {
+    border: none;
+  }
+  @include mq(xl) {
+    padding: 1.5rem;
+  }
+
+  @include mq(xl) {
+    padding: 1.5rem;
+  }
+  &__label {
+    font-size: 1rem;
+    font-weight: $font-weight-semi-bold;
+    margin-bottom: 0.25rem;
+  }
+
+  &__input {
+    height: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 1rem 0.25rem;
+    font-size: 1rem;
+  }
+
+  &__input--message {
+    font: inherit;
+    padding: 0.5rem;
+    height: auto;
+
+    resize: none;
+  }
+
+  &__input:focus {
+    outline: 2px solid blue;
+  }
+
+  &__input--valid {
+    outline: 2px solid green;
+  }
+
+  &__input--invalid {
+    outline: 2px solid red;
+  }
+
+  &__button {
+    align-self: start;
+    @include std-btn();
+  }
+
+  &__err-message {
+    font-size: 12px;
+    color: red;
+    margin: 0.5rem 0;
+    border-radius: 3px;
+    visibility: hidden;
+  }
+
+  &__err-message--visible {
+    visibility: visible;
+  }
+}

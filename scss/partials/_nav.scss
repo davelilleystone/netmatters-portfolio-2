@@ -3,10 +3,10 @@
 .hamburger {
   position: fixed;
   left: 20px;
-  top: 10px;
+  top: 0;
   font-size: 2rem;
   border-radius: 3px;
-  z-index: 1;
+  z-index: 10;
   transition: all 0.25s;
 
   &:hover {
@@ -22,6 +22,20 @@
   }
 }
 
+// MOBILE NAV BACKGROUND
+
+.mobile-nav-bg {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 3rem;
+  background-color: red;
+  z-index: 7;
+  @include mq(m) {
+    display: none;
+  }
+}
+
 // SIDEBAR MAIN CONTAINER
 
 .sidebar {
@@ -34,7 +48,7 @@
   overflow: hidden;
   transform: translateX(-100%);
   transition: all 0.25s;
-
+  z-index: 5;
   &--ms-open {
     transform: translateX(0);
   }
@@ -49,6 +63,10 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+
+    @include mq(m) {
+      transform: translateX(0);
+    }
     margin: 0 65px;
   }
 }

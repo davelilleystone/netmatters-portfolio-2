@@ -2,6 +2,7 @@
   line-height: $base-line-height;
   font-size: $font-size-normal;
   font-family: $font-body;
+  color: #121212;
 }
 * {
   margin: 0;
@@ -22,4 +23,17 @@ h2,
 h3,
 h4 {
   font-family: $font-heading;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: $font-size-section-heading-mobile;
+  margin-bottom: 1.5rem;
+  @include mq(l) {
+    font-size: $font-size-section-heading;
+    margin-bottom: 2rem;
+  }
 }

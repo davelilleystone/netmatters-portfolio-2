@@ -1,9 +1,6 @@
 // PROJECTS CONTAINER
 
 .projects {
-  &__title {
-    font-size: $font-size-section-heading;
-  }
 }
 
 // PROJECTS CARD CONTAINER
@@ -18,17 +15,21 @@
 }
 
 // PROJECTS CARD
+
+.card,
+.card__image {
+  border-radius: 5px;
+}
 .card {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border-radius: 5px;
+  margin-bottom: 2rem;
   box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
 
   &__image {
     width: 100%;
     box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
   }
   &__title {
     font-size: $font-size-card-heading;
@@ -70,7 +71,7 @@
   }
 
   &__button {
-    @include std-btn(blue);
+    @include std-btn();
     margin-right: 0.5rem;
   }
   @include mq(xl) {

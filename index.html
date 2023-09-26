@@ -19,6 +19,7 @@
   </head>
   <body>
     <div class="hamburger"><i class="fa-solid fa-bars hamburger__icon"></i></div>
+    <div class="mobile-nav-bg"></div>
     <div class="sidebar">
       <div class="sidebar__content">
         <div class="logo">
@@ -48,7 +49,7 @@
     <div class="content-container">
       <div class="content-wrapper">
         <div class="projects">
-          <h2 class="projects__title">Projects</h2>
+          <h2 class="projects__title section-heading">Projects</h2>
           <div class="card-container">
             <div class="card">
               <picture
@@ -112,8 +113,121 @@
                 <a href="" class="card__button">view code</a>
               </div>
             </div>
+            <div class="card">
+              <picture
+                ><img class="card__image" src="./img/projects/project-1-img.png" alt="netmatters project"
+              /></picture>
+              <h3 class="card__title">Netmatters</h3>
+              <div class="card__technologies">
+                <span class="card__technology card__technology--html">HTML</span
+                ><span class="card__technology card__technology--css">CSS</span
+                ><span class="card__technology card__technology--js">JS</span
+                ><span class="card__technology card__technology--sass">SASS</span>
+              </div>
+              <p class="card__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quidem alias blanditiis obcaecati debitis
+                id nam odio rem maiores, eaque cumque sint sequi quis quia quas molestiae tenetur quam amet. Lorem ipsum
+                dolor sit amet.
+              </p>
+              <div class="card__buttons">
+                <a href="" class="card__button">view site</a>
+                <a href="" class="card__button">view code</a>
+              </div>
+            </div>
+            <div class="card">
+              <picture
+                ><img class="card__image" src="./img/projects/project-1-img.png" alt="netmatters project"
+              /></picture>
+              <h3 class="card__title">Netmatters</h3>
+              <div class="card__technologies">
+                <span class="card__technology card__technology--html">HTML</span
+                ><span class="card__technology card__technology--css">CSS</span
+                ><span class="card__technology card__technology--js">JS</span
+                ><span class="card__technology card__technology--sass">SASS</span>
+              </div>
+              <p class="card__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quidem alias blanditiis obcaecati debitis
+                id nam odio rem maiores, eaque cumque sint sequi quis quia quas molestiae tenetur quam amet. Lorem ipsum
+                dolor sit amet.
+              </p>
+              <div class="card__buttons">
+                <a href="" class="card__button">view site</a>
+                <a href="" class="card__button">view code</a>
+              </div>
+            </div>
+            <div class="card">
+              <picture
+                ><img class="card__image" src="./img/projects/project-1-img.png" alt="netmatters project"
+              /></picture>
+              <h3 class="card__title">Netmatters</h3>
+              <div class="card__technologies">
+                <span class="card__technology card__technology--html">HTML</span
+                ><span class="card__technology card__technology--css">CSS</span
+                ><span class="card__technology card__technology--js">JS</span
+                ><span class="card__technology card__technology--sass">SASS</span>
+              </div>
+              <p class="card__text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ex quidem alias blanditiis obcaecati debitis
+                id nam odio rem maiores, eaque cumque sint sequi quis quia quas molestiae tenetur quam amet. Lorem ipsum
+                dolor sit amet.
+              </p>
+              <div class="card__buttons">
+                <a href="" class="card__button">view site</a>
+                <a href="" class="card__button">view code</a>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="content-wrapper">
+        <div class="contact">
+          <div class="contact-text">
+            <picture><img src="./img/contact-us.jpg" alt="" class="contact-text__image" /></picture>
+            <div class="contact-text__text-wrapper">
+              <p class="contact-text__paragraph">
+                <strong>I would love to hear about your project and how I could help.</strong>
+              </p>
+
+              <p class="contact-text__paragraph">
+                Please fill in the form with your details and I'll get back to you as soon as possible - all fields
+                should be filled in.
+              </p>
+
+              <p class="contact-text__paragraph">
+                If you would prefer to contact me directly, you can call me on <strong>01234 576 890</strong>. I am also
+                available via email on <strong>dave@dplwebdesign.co.uk.</strong>
+              </p>
+              <p class="contact-text__paragraph">I look forward to hearing from you!</p>
+            </div>
+          </div>
+          <div class="form-wrapper">
+            <form action="#" class="form" novalidate>
+              <label for="name" class="form__label">Name</label>
+              <input type="text" name="name" id="name" class="form__input" />
+              <div class="form__err-message">Please enter your name</div>
+              <label for="email" class="form__label">Email</label>
+              <input type="email" name="email" id="email" class="form__input" />
+              <div class="form__err-message">Email not valid</div>
+              <label for="message" class="form__label">Message (min 25 characters)</label>
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="10"
+                class="form__input form__input--message"
+              ></textarea>
+              <div class="form__err-message">Message too short</div>
+              <input type="submit" value="Message Me" class="form__button" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="content-wrapper">
+        <footer class="footer">&copy; Dave Lilleystone 2023</footer>
       </div>
     </div>
   </body>

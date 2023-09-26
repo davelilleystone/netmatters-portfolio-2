@@ -22,6 +22,7 @@ $font-size-large: px-to-rem(18px);
 $font-size-xlarge: 1.5rem;
 
 $font-size-section-heading: 3rem;
+$font-size-section-heading-mobile: 2rem;
 $font-size-card-heading: 1.5rem;
 
 // font weight
@@ -41,6 +42,7 @@ $html-orange: #e34c26;
 $css-blue: #264de4;
 $js-yellow: #f0db4f;
 $sass-pink: #c69;
+$soft-blue: #4681f4;
 
 //////////////////
 // Screen Size //
@@ -60,3 +62,5 @@ $xl: 1200px;
 $content-wrapper-max: 1200px;
 
 $base-line-height: 1.5;
+
+$std-btn-color: $soft-blue;
