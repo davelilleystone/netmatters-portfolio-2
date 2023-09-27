@@ -67,6 +67,17 @@ p {
   }
 }
 
+.section-subheading {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+}
+@media screen and (min-width: 992px) {
+  .section-subheading {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+}
+
 .hamburger {
   position: fixed;
   left: 20px;
@@ -136,6 +147,8 @@ p {
 
 .logo {
   margin: 4rem 0 3rem;
+  border: 2px solid black;
+  border-radius: 5px;
 }
 
 .nav-links__link {
@@ -212,7 +225,7 @@ p {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .card__title {
-  font-size: 1.5rem;
+  font-size: 2rem;
   margin: 1rem 0 0.25rem;
 }
 .card__technologies {
@@ -381,6 +394,27 @@ p {
 }
 .form__err-message--visible {
   visibility: visible;
+}
+
+.scs__banner {
+  width: 100%;
+  max-width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .scs__content-container {
+    font-size: 18px;
+  }
+}
+.scs__container {
+  display: flex;
+  flex-direction: column;
+}
+.scs__image img {
+  width: 100%;
+  border-radius: 5px;
+}
+.scs__netmatters-list {
+  list-style: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -37,3 +37,12 @@ p {
     margin-bottom: 2rem;
   }
 }
+
+.section-subheading {
+  font-size: $font-size-section-subheading-mobile;
+  margin: 1.5rem 0;
+  @include mq(l) {
+    font-size: $font-size-section-subheading;
+    margin: 2rem 0;
+  }
+}
