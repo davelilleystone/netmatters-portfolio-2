@@ -27,6 +27,23 @@
   }
 }
 
+.top-image-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+}
+@media screen and (min-width: 768px) {
+  .top-image-container {
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .top-image-container {
+    padding: 0 2rem;
+  }
+}
+
 :root {
   line-height: 1.5;
   font-size: 1rem;
@@ -38,6 +55,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 a {
@@ -225,7 +248,7 @@ p {
   box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
 }
 .card__title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin: 1rem 0 0.25rem;
 }
 .card__technologies {
@@ -268,7 +291,11 @@ p {
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
   margin-right: 0.5rem;
+}
+.card__button:hover {
+  background-color: #1660f1;
 }
 @media screen and (min-width: 1200px) {
   .card {
@@ -384,6 +411,10 @@ p {
   border-radius: 3px;
   text-transform: uppercase;
   text-decoration: none;
+  cursor: pointer;
+}
+.form__button:hover {
+  background-color: #1660f1;
 }
 .form__err-message {
   font-size: 12px;

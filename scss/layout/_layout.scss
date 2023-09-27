@@ -10,13 +10,26 @@
   }
 }
 
-// add temp bottom margin
 .content-wrapper {
   margin: 0 auto;
   width: 100%;
   max-width: $content-wrapper-max;
   padding: 0 1rem;
   @include mq(m) {
+    padding: 0 1.5rem;
+  }
+
+  @include mq(l) {
+    padding: 0 2rem;
+  }
+}
+
+.top-image-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: $content-wrapper-max;
+  @include mq(m) {
+    margin-top: 1rem;
     padding: 0 1.5rem;
   }
 
