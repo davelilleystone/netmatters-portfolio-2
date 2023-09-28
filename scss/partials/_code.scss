@@ -1,0 +1,17 @@
+.code {
+  &__text {
+    margin-top: 1rem;
+    & ul {
+      list-style: none;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__code {
+    overflow-x: auto;
+    padding: 2rem;
+    background-color: hsl(0, 0%, 88%);
+    margin-top: 2rem;
+    border-radius: 5px;
+  }
+}

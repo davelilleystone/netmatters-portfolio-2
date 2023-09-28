@@ -49,3 +49,22 @@ p {
     margin: 2rem 0;
   }
 }
+
+.top-image-container {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 5px;
+  max-width: $content-wrapper-max;
+  @include mq(m) {
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+  }
+
+  @include mq(l) {
+    padding: 0 2rem;
+  }
+
+  & img {
+    border-radius: 5px;
+  }
+}

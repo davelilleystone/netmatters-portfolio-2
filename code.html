@@ -19,7 +19,6 @@
   </head>
   <body>
     <div class="hamburger"><i class="fa-solid fa-bars hamburger__icon"></i></div>
-    <div class="mobile-nav-bg"></div>
     <div class="sidebar">
       <div class="sidebar__content">
         <div class="logo">
@@ -64,8 +63,152 @@
       <div class="content-wrapper">
         <h1 class="section-heading">Code Examples</h1>
         <div class="code__content-container">
-          <div class="code__text"></div>
-          <div class="code__code"></div>
+          <h2 class="section-subheading">Form Validation</h2>
+
+          <div class="code__code">
+            <pre>
+            <code>
+// form validation JavaScript
+
+const form = document.querySelector("form");      
+form.noValidate = true;
+const emailRegex = new RegExp(
+/^("(?:[!#-\[\]-\u{10FFFF}]|\\[\t -\u{10FFFF}])*
+"|[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}](?:\.?[!#-'*+\-
+/-9=?A-Z\^-\u{10FFFF}])*)@([!#-'*+\-/-9=?A-Z\^-\
+u{10FFFF}](?:\.?[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}])
+*|\[[!-Z\^-\u{10FFFF}]*\])$/u);
+                
+// class names for valid / invalid inputs
+
+const validClassName = "form__input--valid";
+const invalidClassName = "form__input--invalid";
+const errorMessageClassName = "form__err-message--visible";
+
+// add / remove classes
+
+const removeClass = (el, className) => el.classList.remove(className);
+const addClass = (el, className) => el.classList.add(className);
+
+// check if name and message length are valid
+
+const checkInputIsValid = (el) => {
+  if (el.name === "name") {
+    return el.value.trim().length > 0 ? true : false;
+  } else if (el.name === "message") {
+    return el.value.trim().length >= 25 ? true : false;
+  }
+};
+
+// check if email input is valid using regex 
+
+const checkEmailIsValid = (el) => emailRegex.test(el.value);
+
+// add 'valid' class and remove 'invalid' class
+
+const inputIsValid = (el) => {
+  removeClass(el, invalidClassName);
+  removeClass(el.nextElementSibling, errorMessageClassName);
+  addClass(el, validClassName);
+  
+};
+
+/* add 'invalid' class and add 'error message' 
+class to show error message to user */
+
+const inputIsNotValid = (el) => {
+  addClass(el, invalidClassName);
+  addClass(el.nextElementSibling, errorMessageClassName);
+};
+
+// determines if input is valid - if not  
+
+const checkInput = (el) => {
+  console.log(el.id);
+
+  let inputState = true;
+  if (el.id === "name" || el.id === "message") {
+    if (!checkInputIsValid(el)) {
+      inputIsNotValid(el);
+      inputState = false;
+    } else {
+      inputIsValid(el);
+    }
+  } else if (el.id === "email") {
+    if (!checkEmailIsValid(el)) {
+      inputIsNotValid(el);
+      inputState = false;
+    } else {
+      inputIsValid(el);
+    }
+  }
+  return inputState;
+};
+
+// event listeners
+
+// check all fields are valid, only submit when they are.
+
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+
+  let formValid = true;
+  const inputs = document.querySelectorAll(".form__input");
+
+  inputs.forEach((el) => {
+    if (!checkInput(el)) {
+      addClass(el.nextElementSibling, errorMessageClassName);
+      formValid = false;
+    }
+  });
+
+  if (formValid) {
+    form.submit();
+  }
+});
+
+// check if input is valid each time element value changes
+
+form.addEventListener("input", (evt) => {
+  let el = evt.target;
+  checkInput(el);
+});
+</code>
+</pre>
+          </div>
+          <div class="code__text">
+            <p>
+              The above code was written in JavaScript and is used to validate the input on my contact form. The
+              novalidate property on the form has been set to true programmatically so that the browsers validation
+              rules are overridden.
+            </p>
+            <p>The code checks that the following criteria has been met:</p>
+            <ul>
+              <li><strong>Name field has an entry of at least one character</strong></li>
+              <li><strong>Email field contains a valid email address</strong></li>
+              <li><strong>Message field contains at least 25 characters</strong></li>
+            </ul>
+            <p>
+              When the input changes for an element, the checkInput() function is run. For the name and message fields,
+              the value is checked against the criteria above using the checkInputIsValid() function. This will return a
+              boolean and if false, the input border will turn red (visually signifying an error has occurred) and a
+              message is provided to the user e.g. 'The message is too short'. If the value is valid then a green border
+              is placed around the input (visually signifying the input is ok) - if there was previously an error
+              message showing then it is removed.
+            </p>
+            <p>
+              Email validation uses the checkEmailIsValid() function. The input value is tested against a regular
+              expression to test its validity and feedback provided to the user as per the name and message fields.
+            </p>
+            <p>
+              When the form is submitted, each element is checked to determine if it is valid. If they are, the form is
+              submitted, if not feedback is provided to the user as described above.
+            </p>
+            <p>
+              In the case where JavaScript is unable to run on the users browser, rudimentary validation is used within
+              the HTML by setting the 'required' attribute on each form element with the appropriate values.
+            </p>
+          </div>
         </div>
       </div>
     </div>

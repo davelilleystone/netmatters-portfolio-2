@@ -30,6 +30,7 @@
 .top-image-container {
   margin: 0 auto;
   width: 100%;
+  border-radius: 5px;
   max-width: 1200px;
 }
 @media screen and (min-width: 768px) {
@@ -42,6 +43,9 @@
   .top-image-container {
     padding: 0 2rem;
   }
+}
+.top-image-container img {
+  border-radius: 5px;
 }
 
 :root {
@@ -99,6 +103,27 @@ p {
     font-size: 2rem;
     margin: 2rem 0;
   }
+}
+
+.top-image-container {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 5px;
+  max-width: 1200px;
+}
+@media screen and (min-width: 768px) {
+  .top-image-container {
+    margin-top: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+@media screen and (min-width: 992px) {
+  .top-image-container {
+    padding: 0 2rem;
+  }
+}
+.top-image-container img {
+  border-radius: 5px;
 }
 
 .hamburger {
@@ -425,6 +450,21 @@ p {
 }
 .form__err-message--visible {
   visibility: visible;
+}
+
+.code__text {
+  margin-top: 1rem;
+}
+.code__text ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+.code__code {
+  overflow-x: auto;
+  padding: 2rem;
+  background-color: hsl(0, 0%, 88%);
+  margin-top: 2rem;
+  border-radius: 5px;
 }
 
 .scs__banner {

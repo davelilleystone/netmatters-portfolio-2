@@ -21,17 +21,24 @@ window.addEventListener("resize", () => {
 // form validation
 
 const form = document.querySelector("form");
+form.noValidate = true;
 const emailRegex = new RegExp(
   /^("(?:[!#-\[\]-\u{10FFFF}]|\\[\t -\u{10FFFF}])*"|[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}](?:\.?[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}])*)@([!#-'*+\-/-9=?A-Z\^-\u{10FFFF}](?:\.?[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}])*|\[[!-Z\^-\u{10FFFF}]*\])$/u
 );
+
+// class names for valid / invalid inputs
+
 const validClassName = "form__input--valid";
 const invalidClassName = "form__input--invalid";
 const errorMessageClassName = "form__err-message--visible";
 
-// functions
+// add / remove classes
 
 const removeClass = (el, className) => el.classList.remove(className);
 const addClass = (el, className) => el.classList.add(className);
+
+// check if name and message length are valid
+
 const checkInputIsValid = (el) => {
   if (el.name === "name") {
     return el.value.trim().length > 0 ? true : false;
@@ -39,16 +46,26 @@ const checkInputIsValid = (el) => {
     return el.value.trim().length >= 25 ? true : false;
   }
 };
+
+// check if email input is valid using regex
+
 const checkEmailIsValid = (el) => emailRegex.test(el.value);
+
+// add 'valid' class and remove 'invalid' class
+
 const inputIsValid = (el) => {
   removeClass(el, invalidClassName);
   addClass(el, validClassName);
   removeClass(el.nextElementSibling, errorMessageClassName);
 };
+
+// add 'invalid' class and add 'error message' class to show error message to user
 const inputIsNotValid = (el) => {
   addClass(el, invalidClassName);
   addClass(el.nextElementSibling, errorMessageClassName);
 };
+
+// called on
 
 const checkInput = (el) => {
   console.log(el.id);
@@ -74,6 +91,8 @@ const checkInput = (el) => {
 
 // event listeners
 
+// check all fields are valid, only submit when they are.
+
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
 
@@ -89,9 +108,10 @@ form.addEventListener("submit", (evt) => {
 
   if (formValid) {
     form.submit();
-    alert("Form Submitted");
   }
 });
+
+// check if input is valid time element value changes
 
 form.addEventListener("input", (evt) => {
   let el = evt.target;
