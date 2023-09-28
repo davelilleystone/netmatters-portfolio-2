@@ -18,8 +18,9 @@
     <script src="./js/script.js" defer></script>
   </head>
   <body>
-    <div class="hamburger"><i class="fa-solid fa-bars hamburger__icon"></i></div>
-    <div class="mobile-nav-bg"></div>
+    <div class="hamburger">
+      <span><i class="fa-solid fa-bars hamburger__icon"></i></span>
+    </div>
     <div class="sidebar">
       <div class="sidebar__content">
         <div class="logo">
@@ -51,7 +52,16 @@
         </div>
       </div>
     </div>
-    <div class="content-container"><div class="hero"></div></div>
+    <div class="content-container">
+      <div class="hero">
+        <div class="hero__content">
+          <div class="hero__text">Welcome To</div>
+          <div>
+            <picture><img src="./img/logo-black.png" alt="" /></picture>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="content-container">
       <div class="content-wrapper">
         <div class="projects" id="projects">
@@ -209,7 +219,7 @@
             </div>
           </div>
           <div class="form-wrapper">
-            <form action="#" class="form" novalidate>
+            <form action="#" class="form">
               <label for="name" class="form__label">Name</label>
               <input type="text" name="name" id="name" class="form__input" />
               <div class="form__err-message">Please enter your name</div>

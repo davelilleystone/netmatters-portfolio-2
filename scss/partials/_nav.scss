@@ -3,11 +3,14 @@
 .hamburger {
   position: fixed;
   left: 20px;
-  top: 0;
-  font-size: 2rem;
+  top: 5px;
+  padding: 0 0.5rem;
+  border: 1px solid $dark-grey;
+  font-size: 1.5rem;
   border-radius: 3px;
   z-index: 10;
   transition: all 0.25s;
+  background-color: $alice-blue;
 
   &:hover {
     cursor: pointer;
@@ -18,7 +21,8 @@
   }
 
   @include mq(m) {
-    visibility: hidden;
+    // visibility: hidden;
+    display: none;
   }
 }
 
@@ -49,6 +53,7 @@
   transform: translateX(-100%);
   transition: all 0.25s;
   z-index: 5;
+  background-color: $alice-blue;
   &--ms-open {
     transform: translateX(0);
   }
@@ -82,6 +87,7 @@
 // SIDEBAR LINKS CONTAINER
 
 .nav-links {
+  transition: 0.5s;
   &__link {
     display: flex;
     align-items: center;
@@ -92,6 +98,10 @@
   &__icon {
     margin-right: 0.5rem;
     flex: 0 0 25%;
+  }
+  :hover {
+    color: darken($alice-blue, 60%);
+    transform: scale(1.2);
   }
 }
 
