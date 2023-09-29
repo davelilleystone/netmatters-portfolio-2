@@ -146,6 +146,7 @@ function init() {
       break;
     case "/code.html":
     case "/scs.html":
+    case "/about.html":
       navigation();
       break;
     default:
