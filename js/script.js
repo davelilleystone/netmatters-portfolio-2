@@ -108,7 +108,7 @@ function formValidation() {
     }
   });
 
-  // check if input is valid time element value changes
+  // check if input is valid each time element value changes
 
   form.addEventListener("input", (evt) => {
     let el = evt.target;
@@ -133,14 +133,16 @@ function getTypewriter() {
   };
 }
 
+// load
+
 function init() {
   const pathName = location.pathname;
   switch (pathName) {
     case "/":
     case "/index.html":
       getTypewriter()();
-      navigation();
       formValidation();
+      navigation();
       break;
     case "/code.html":
     case "/scs.html":
