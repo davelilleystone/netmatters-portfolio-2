@@ -311,10 +311,9 @@ p {
 }
 .card__text {
   margin-bottom: 1rem;
-  flex: 1;
 }
 .card__buttons {
-  margin-top: 2rem;
+  margin-top: auto;
 }
 .card__button {
   display: inline-block;
