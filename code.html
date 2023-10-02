@@ -72,12 +72,7 @@
 
 const form = document.querySelector("form");      
 form.noValidate = true;
-const emailRegex = new RegExp(
-/^("(?:[!#-\[\]-\u{10FFFF}]|\\[\t -\u{10FFFF}])*
-"|[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}](?:\.?[!#-'*+\-
-/-9=?A-Z\^-\u{10FFFF}])*)@([!#-'*+\-/-9=?A-Z\^-\
-u{10FFFF}](?:\.?[!#-'*+\-/-9=?A-Z\^-\u{10FFFF}])
-*|\[[!-Z\^-\u{10FFFF}]*\])$/u);
+const emailRegex = new RegExp(/^[a-zA-Z0-9._\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,6}$/);
                 
 // class names for valid / invalid inputs
 

@@ -133,7 +133,16 @@ function getTypewriter() {
   };
 }
 
-// load
+// ACTIVE PAGE
+
+const links = document.querySelectorAll(".nav-links__link");
+
+console.log(links);
+console.log(location);
+
+links.forEach((link) => {});
+
+// INIT
 
 function init() {
   const pathName = location.pathname;
