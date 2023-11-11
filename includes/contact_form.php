@@ -47,15 +47,22 @@ function setErrorMessage($key)
 <div class="form-wrapper" id="contact-form">
     <form action="./index.php#contact-form" class="form" method="post" novalidate>
         <label for="name" class="form__label">Name</label>
-        <input type="text" name="name" id="name" class="form__input <?= setInputClass('name') ?>" value="<?= setInputValue('name') ?>" minlength="1" required />
+        <input type="text" name="name" id="name" class="form__input <?= setInputClass('name') ?>"
+            value="<?= setInputValue('name') ?>" minlength="1" required />
         <div class="form__err-message <?= setErrorClass('name') ?>">
             <?= setErrorMessage('name') ?></div>
         <label for="email" class="form__label">Email</label>
         <input type="email" name="email" id="email" class="form__input" required />
         <div class="form__err-message">Email not valid</div>
         <label for="message" class="form__label">Message (min 25 characters)</label>
-        <textarea name="message" id="message" minlength="25" required cols="30" rows="10" class="form__input form__input--message"></textarea>
+        <textarea name="message" id="message" minlength="25" required cols="30" rows="10"
+            class="form__input form__input--message"></textarea>
         <div class="form__err-message"></div>
         <input type="submit" name="submit" value="Message Me" class="form__button" />
     </form>
+    // show success message if form submitted successfully
+    <?php if (isset($formSuccess)) : ?>
+    <div class="form__success-message">
+        <?= $formSuccess ?>
+    </div>
 </div>

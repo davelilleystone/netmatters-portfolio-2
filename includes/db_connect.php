@@ -8,23 +8,3 @@ try {
 } catch (PDOException $ex) {
     exit(header('Location: contact_form_error.html'));
 }
-
-$sql = $conn->prepare("INSERT into contact_form (name,company,email,telephone,message)
-        VALUES(:name, :company, :email, :telephone, :message)");
-
-$sql_values = [
-    ':name' => $name,
-    ':company' => $company,
-    ':email' => $email,
-    ':telephone' => $telephone,
-    ':message' => $message
-];
-
-//db insert
-
-try {
-    $sql->execute($sql_values);
-    header('Location: contact_form_success.html');
-} catch (PDOException $ex) {
-    exit(header('Location: contact_form_error.html'));
-}
