@@ -133,22 +133,13 @@ function getTypewriter() {
   };
 }
 
-// ACTIVE PAGE
-
-const links = document.querySelectorAll(".nav-links__link");
-
-console.log(links);
-console.log(location);
-
-links.forEach((link) => {});
-
 // INIT
 
 function init() {
   const pathName = location.pathname;
   switch (pathName) {
     case "/":
-    case "/index.html":
+    case "/index.php":
       getTypewriter()();
       formValidation();
       navigation();
