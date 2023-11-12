@@ -460,6 +460,10 @@ p {
 .form__err-message--visible {
   visibility: visible;
 }
+.form__submit-message {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 
 .code__text {
   margin-top: 1rem;

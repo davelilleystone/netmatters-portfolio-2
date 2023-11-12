@@ -104,7 +104,8 @@ function formValidation() {
     });
 
     if (formValid) {
-      form.submit();
+console.log('submitting form')
+      form.submit()
     }
   });
 

@@ -116,4 +116,9 @@
   &__err-message--visible {
     visibility: visible;
   }
+
+  &__submit-message {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
 }

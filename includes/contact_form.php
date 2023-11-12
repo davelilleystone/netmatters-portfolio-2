@@ -47,22 +47,22 @@ function setErrorMessage($key)
 <div class="form-wrapper" id="contact-form">
     <form action="index.php#contact-form" class="form" method="post" novalidate>
         <?php if ($formSubmitSuccess) : ?>
-            <div>Your message has been sent!</div>
+            <div class="form__submit-message">Your message has been received, thanks for getting in touch.</div>
         <?php elseif ($formSubmitError) : ?>
-            <div>There was a problem sending your message - please try again.</div>
+            <div class="form__submit-message">There was a problem sending your message - please try again.</div>
         <?php endif; ?>
         <label for="name" class="form__label">Name</label>
         <input type="text" name="name" id="name" class="form__input <?= setInputClass('name') ?>" value="<?= setInputValue('name') ?>" minlength="1" required />
-        <div class="form__err-message <?= setErrorClass('name') ?>">
-            <?= setErrorMessage('name') ?></div>
+        <div class="form__err-message <?= setErrorClass('name') ?>">Please enter your name.
+        </div>
         <label for="email" class="form__label">Email</label>
         <input type="email" name="email" id="email" class="form__input  <?= setInputClass('email') ?>" value="<?= setInputValue('email') ?> " required />
-        <div class=" form__err-message <?= setErrorClass('email') ?>"><?= setErrorMessage('email') ?>
+        <div class=" form__err-message <?= setErrorClass('email') ?>">Please enter a valid email address.
         </div>
         <label for="message" class="form__label">Message (min 25 characters)</label>
         <textarea name="message" id="message" minlength="25" required cols="30" rows="10" class="form__input form__input--message <?= setInputClass('message') ?>"><?= setInputValue('message') ?></textarea>
-        <div class="form__err-message <?= setErrorClass('message') ?>"><?= setErrorMessage('message') ?></div>
-        <input type="submit" name="submit" value="Message Me" class="form__button" />
+        <div class="form__err-message <?= setErrorClass('message') ?>">Message too short - minimum 25 characters.</div>
+        <input type="submit" name="submitBtn" class="form__button" />
 
     </form>
 

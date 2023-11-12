@@ -1,8 +1,6 @@
 <?php
 
-
-
-$host = "localhost";
-$db_name = "nm_portfolio";
-$user_name = "user";
-$password = "U-UG@f?AU6d23-4";
+$host = 'localhost';
+$db_name = 'davelill_portfolio';
+$user_name = 'davelill_dave';
+$password = '~mCsrp]JrTQI';

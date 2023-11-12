@@ -16,7 +16,7 @@ $showError = 'form__err-message--visible';
 
 // Check if the form has been submitted
 
-if (isset($_POST['submit'])) {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = sanitize($_POST['name']);
     $email = sanitize($_POST['email']);
     $message = sanitize($_POST['message']);
@@ -59,7 +59,7 @@ if (isset($_POST['submit'])) {
 
     if ($formValid) {
         include './includes/db_connect.php';
-        echo 'form valid';
+
         if ($formSubmitError == false) {
             include './includes/db_insert.php';
         }
