@@ -5,6 +5,11 @@ include './includes/sanitize_input.php';
 $formErrors = [];
 $formInputs = [];
 $formValid = true;
+
+$formSubmitSuccess = false;
+$formSubmitError = false;
+
+// Set up variables for form field classes and error message visibility
 $formInputValid = 'form__input--valid';
 $formInputInvalid = 'form__input--invalid';
 $showError = 'form__err-message--visible';
@@ -36,7 +41,9 @@ if (isset($_POST['submit'])) {
         $formInputs['email'] = $email;
     }
 
-    if (empty($message || strlen($message) < 25)) {
+    if (empty($message) || strlen($message) < 25) {
+        global $inMessage;
+        $inMessage = 'true';
         if (empty($message)) {
             $formErrors['message'] = 'Please enter a message';
         } else {
@@ -46,5 +53,15 @@ if (isset($_POST['submit'])) {
         $formValid = false;
     } else {
         $formInputs['message'] = $message;
+    }
+
+    // If the form is valid, submit it to the database
+
+    if ($formValid) {
+        include './includes/db_connect.php';
+        echo 'form valid';
+        if ($formSubmitError == false) {
+            include './includes/db_insert.php';
+        }
     }
 }

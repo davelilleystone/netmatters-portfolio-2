@@ -11,7 +11,9 @@ $sql_values = [
 
 try {
     $stmt->execute($sql_values);
-    header('Location: contact_form_success.html');
+    $formErrors = [];
+    $formInputs = [];
+    $formSubmitSuccess = true;
 } catch (PDOException $ex) {
-    exit(header('Location: contact_form_error.html'));
+    $formSubmitError = true;
 }
